@@ -1,0 +1,13 @@
+[
+  {
+      "model": "rockstars.band",
+      "pk" : 1,
+      "fields": {
+
+        "name": "day6"
+      }
+              
+          
+      }
+  
+]
