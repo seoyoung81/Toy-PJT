@@ -1,0 +1,17 @@
+[
+    {
+        "model": "rockstars.album",
+        "pk" : 1,
+        "fields": {
+  
+          "title": "행복한 날들이었다",
+          "genre": "밴드",
+        //   album_path = models.IntegerField(),
+          "lylics": "dkssdkjhk ksdhf",
+          "bands": 1
+        }
+                
+            
+        }
+    
+  ]
