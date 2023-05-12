@@ -1,13 +1,38 @@
 [
-  {
+      {
       "model": "rockstars.band",
       "pk" : 1,
       "fields": {
 
-        "name": "day6"
+        "name": "day6",
+        "group_path": "https://www.youtube.com/@DAY6Official"
       }
               
           
-      }
+      },
+
+      {
+        "model": "rockstars.band",
+        "pk" : 2,
+        "fields": {
+  
+          "name": "N.flying",
+          "group_path": "https://www.youtube.com/@nflyingofficial"
+        }
+                
+            
+        },
+
+        {
+          "model": "rockstars.band",
+          "pk" : 3,
+          "fields": {
+    
+            "name": "Lucy",
+            "group_path": "https://www.youtube.com/@LUCYISLAND"
+          }
+                  
+              
+          }
   
 ]

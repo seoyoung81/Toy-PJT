@@ -11,7 +11,7 @@ class Album(models.Model):
     genre = models.CharField(max_length=30)
     album_path = models.TextField()
     tracks = models.IntegerField()
-    bands = models.ForeignKey("Band", on_delete=models.CASCADE)
+    bands = models.ForeignKey("Band", on_delete=models.CASCADE, related_name="band_id")
 
 class Track(models.Model):
     album = models.ForeignKey("Album", on_delete=models.CASCADE)
@@ -23,4 +23,4 @@ class Track(models.Model):
     
 class Community(models.Model):
     band = models.ForeignKey("Band", on_delete=models.CASCADE)
-    contemt = models.TextField()
+    content = models.TextField()

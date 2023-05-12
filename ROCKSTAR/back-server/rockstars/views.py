@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Band, Album, Track, Community
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import BandSerializer, AlbumSerializer
+from .serializers import BandSerializer, AlbumSerializer, AlbumdetailSerializer
 from rest_framework import status
 
 # Create your views here.
@@ -20,7 +20,13 @@ def band_detail(request, band_pk):
     return Response(serializer.data)
 
 @api_view(('GET',))
-def album_detail(request, album_pk):
+def album_list(request):
     albums = Album.objects.all()
     serializer = AlbumSerializer(albums, many=True)
+    return Response(serializer.data)
+
+@api_view(('GET',))
+def album_detail(request, album_pk):
+    albums = Album.objects.get(pk = album_pk)
+    serializer = AlbumdetailSerializer(albums)
     return Response(serializer.data)
