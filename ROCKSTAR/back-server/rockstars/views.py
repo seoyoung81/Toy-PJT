@@ -30,3 +30,8 @@ def album_detail(request, album_pk):
     albums = Album.objects.get(pk = album_pk)
     serializer = AlbumdetailSerializer(albums)
     return Response(serializer.data)
+
+# @api_view(('GET',))
+# def community(request):
+#     community = Community.objects.all()
+#     serializer = 

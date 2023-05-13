@@ -24,12 +24,18 @@ class AlbumdetailSerializer(serializers.ModelSerializer):
         exclude = ('bands',)
    
     
-    
-
-
 # 밴드 & 앨범
 class BandAlbumSerializer(serializers.ModelSerializer):
         
         class Meta:
             model = Album
             fields = ('title', )
+
+
+class CommunitySerializer(serializers.ModelSerializer):
+     
+    class Meta:
+        model = Community
+        fields = '__all__'
+
+        read_only_fields = ('band', )    
