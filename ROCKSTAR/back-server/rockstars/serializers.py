@@ -15,7 +15,7 @@ class AlbumSerializer(serializers.ModelSerializer):
         model = Album
         fields = ('title', 'album_path')
 
-class AlbumdetailSerializer(serializers.ModelSerializer):
+class AlbumDetailSerializer(serializers.ModelSerializer):
     band = BandSerializer(read_only=True, source="bands")
     
     class Meta:
@@ -32,6 +32,7 @@ class BandAlbumSerializer(serializers.ModelSerializer):
             fields = ('title', )
 
 
+# 커뮤니티
 class CommunitySerializer(serializers.ModelSerializer):
      
     class Meta:
@@ -39,3 +40,17 @@ class CommunitySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
         read_only_fields = ('band', )    
+
+class CommunityListSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Community
+        fields = '__all__'
+
+class CommunityDetailSerializer(serializers.ModelSerializer):
+    band = BandSerializer(read_only=True, source="bands")
+
+
+    class Meta:
+        model = Community
+        fields = '__all__'
