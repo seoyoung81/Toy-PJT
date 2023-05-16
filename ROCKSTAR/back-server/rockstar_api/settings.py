@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # local apps
     'rockstars',
+    'accounts',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
